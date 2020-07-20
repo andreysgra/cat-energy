@@ -1,0 +1,27 @@
+.button {
+  display: block;
+  box-sizing: border-box;
+  border: none;
+  padding: 11px 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  cursor: pointer;
+
+  &--green {
+    background-color: @green-primary;
+
+    &:hover,
+    &:active {
+      background-color: @green-secondary;
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+    }
+  }
+}

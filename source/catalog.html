@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
   <head>
     <meta charset="UTF-8">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/style.min.css">
   </head>
 
-  <body class="page">
+  <body class="page-body">
     <header class="page-header">
       <div class="page-header__nav-wrapper content-wrapper">
         <nav class="page-header__main-nav main-nav">
@@ -42,6 +42,83 @@
         </nav>
       </div>
     </header>
+
+    <main class="page-main">
+      <div class="page-main__header content-wrapper">
+        <h1 class="page-main__title">Каталог продукции</h1>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <section class="contacts content-wrapper">
+        <h2 class="visually-hidden">Контактная информация</h2>
+
+        <p class="contacts__slogan">Приглашаем к&nbsp;сотрудничеству дилеров!</p>
+
+        <address class="contacts__address">ул. Большая Конюшенная, д. 19/8<br>
+          <span class="contacts__city">Санкт-Петербург</span>
+        </address>
+      </section>
+
+      <div class="map">
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)"
+            srcset="img/content/bg-map-desktop@1x.webp 1x, img/content/bg-map-desktop@2x.webp 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/content/bg-map-tablet@1x.webp 1x, img/content/bg-map-tablet@2x.webp 2x">
+          <source type="image/webp" srcset="img/content/bg-map-mobile@1x.webp 1x, img/content/bg-map-mobile@2x.webp 2x">
+          <source media="(min-width: 1300px)"
+            srcset="img/content/bg-map-desktop@1x.png 1x, img/content/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/content/bg-map-tablet@1x.png 1x, img/content/bg-map-tablet@2x.png 2x">
+          <img class="map__image" src="img/content/bg-map-mobile@1x.png" srcset="img/content/bg-map-mobile@2x.png 2x"
+            alt="Офис по адресу ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+
+        <div class="map__pin"></div>
+
+        <div class="map__interactive" id="map"></div>
+      </div>
+
+      <div class="page-footer__bottom">
+        <div class="page-footer__bottom-wrapper content-wrapper">
+          <a class="page-footer__logo footer-logo" href="index.html" aria-label="Логотип сайта Cat Energy">
+            <img class="footer-logo__image" src="img/logo-footer.svg" alt="Логотип компании" width="128" height="23">
+          </a>
+
+          <ul class="social-links">
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://vk.com" aria-label="Мы ВКонтакте">
+                <svg class="social-links__image social-links__image--vk" width="22" height="12">
+                  <use xlink:href="img/symbols.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://www.instagram.com" aria-label="Мы в Instagram">
+                <svg class="social-links__image social-links__image--inst" width="16" height="16">
+                  <use xlink:href="img/symbols.svg#icon-insta"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social-links__item">
+              <a class="social-links__link" href="https://www.facebook.com" aria-label="Мы в Facebook">
+                <svg class="social-links__image social-links__image--fb" width="10" height="19">
+                  <use xlink:href="img/symbols.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+
+          <a class="page-footer__copiright footer-copiright" href="https://htmlacademy.ru" aria-label="HTML Academy">
+            <span class="footer-copiright__text">HTML Academy</span>
+            <svg class="footer-copiright__image" width="27" height="34">
+              <use xlink:href="img/symbols.svg#logo-htmlacademy"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
 
     <script src="js/svg4everybody.min.js"></script>
     <script src="js/picturefill.min.js"></script>

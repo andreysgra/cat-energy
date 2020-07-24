@@ -1,0 +1,42 @@
+.page-footer {
+  position: relative;
+}
+
+.page-footer__bottom {
+  padding-top: 39px;
+  padding-bottom: 23px;
+  background-color: @gray-lightest;
+
+  @media @tablet {
+    padding-top: 42px;
+    padding-bottom: 38px;
+  }
+}
+
+.page-footer__bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media @tablet {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.page-footer__logo {
+  margin-bottom: 32px;
+
+  @media @tablet {
+    margin-right: 37px;
+    margin-bottom: 0;
+  }
+}
+
+.page-footer__copiright {
+  margin-top: 22px;
+
+  @media @tablet {
+    margin-top: 0;
+  }
+}

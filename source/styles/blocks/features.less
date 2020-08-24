@@ -1,0 +1,143 @@
+.features {
+  position: relative;
+  padding-top: 4px;
+  padding-bottom: 15px;
+
+  @media @tablet {
+    padding-top: 20px;
+    padding-bottom: 6px;
+  }
+
+  @media @desktop {
+    padding-top: 38px;
+  }
+
+  &::after {
+    @media @tablet {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      margin-left: calc(var(--content-padding-tablet) * -1);
+      margin-right: calc(var(--content-padding-tablet) * -1);
+      width: calc(100% + var(--content-padding-tablet) * 2);
+      height: 1px;
+      background-color: @gray-lighten;
+    }
+
+    @media @desktop {
+      content: none;
+    }
+  }
+}
+
+.features__title {
+  margin-top: 0;
+  margin-bottom: 28px;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 60px;
+  color: @black;
+
+  @media @tablet {
+    margin-bottom: 72px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.features__list {
+  display: grid;
+  row-gap: 20px;
+  .list-reset();
+
+  counter-reset: feature;
+
+  @media @tablet {
+    grid-template-columns: repeat(2, 34.6%);
+    column-gap: 140px;
+    row-gap: 37px;
+  }
+
+  @media @desktop {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+  }
+}
+
+.features__list-item {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 80px;
+  min-height: 60px;
+  font-family: @font-family-secondary;
+  font-size: 14px;
+  line-height: 18px;
+
+  @media @tablet {
+    display: block;
+    padding-top: 112px;
+    padding-bottom: 12px;
+    padding-left: 0;
+    min-height: 156px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @green-primary;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media @tablet {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  &::after {
+    position: absolute;
+    z-index: -1;
+    font-family: @font-family-base;
+    color: @gray-lightest;
+    text-align: center;
+
+    @media @tablet {
+      content: counter(feature);
+      counter-increment: feature;
+      top: -38px;
+      right: 0;
+      width: 136px;
+      height: 280px;
+      font-size: 280px;
+      line-height: 280px;
+    }
+  }
+
+  &--first::before {
+    background-image: url("../img/icon-leaf.svg");
+    background-size: 30px 32px;
+  }
+
+  &--second::before {
+    background-image: url("../img/icon-tub.svg");
+    background-size: 29px 31px;
+  }
+
+  &--third::before {
+    background-image: url("../img/icon-eat.svg");
+    background-size: 23px 30px;
+  }
+
+  &--fourth::before {
+    background-image: url("../img/icon-alarm.svg");
+    background-size: 32px 33px;
+  }
+}

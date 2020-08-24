@@ -3,16 +3,16 @@
   margin: 0 auto;
   min-width: @mobile-width;
   max-width: @desktop-width;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: var(--content-padding-mobile);
+  padding-right: var(--content-padding-mobile);
 
   @media @tablet {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: var(--content-padding-tablet);
+    padding-right: var(--content-padding-tablet);
   }
 
   @media @desktop {
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-left: var(--content-padding-desktop);
+    padding-right: var(--content-padding-desktop);
   }
 }

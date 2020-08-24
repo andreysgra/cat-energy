@@ -1,16 +1,13 @@
 .page-header {
-
   &--index {
     @media @desktop {
-      background-image: url("../img/index-background-desktop@1x.jpg"),
-        linear-gradient(90deg, @white 50%, @green-special 50%);
+      background-image: url("../img/index-background-desktop@1x.jpg"), linear-gradient(90deg, @white 50%, @green-special 50%);
       background-size: image-size("../img/index-background-desktop@1x.jpg"), 100%;
       background-position: calc(50% + 360px) center, center;
       background-repeat: no-repeat;
 
       @media @retina {
-        background-image: url("../img/index-background-desktop@2x.jpg"),
-          linear-gradient(90deg, @white 50%, @green-special 50%);
+        background-image: url("../img/index-background-desktop@2x.jpg"), linear-gradient(90deg, @white 50%, @green-special 50%);
         background-size: image-size("../img/index-background-desktop@1x.jpg"), 100%;
       }
     }

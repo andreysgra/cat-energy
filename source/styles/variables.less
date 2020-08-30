@@ -2,6 +2,9 @@
   --content-padding-mobile: 20px;
   --content-padding-tablet: 30px;
   --content-padding-desktop: 40px;
+  --content-width-mobile: (@mobile-width - var(--content-padding-mobile) * 2);
+  --content-width-tablet: (@tablet-width - var(--content-padding-tablet) * 2);
+  --content-width-desktop: (@desktop-width - var(--content-padding-tablet) * 2);
 }
 
 @mobile-width: 320px;
@@ -20,11 +23,14 @@
 
 @font-size-base: 14px;
 @line-height-base: 18px;
+@font-size-base--tablet: 16px;
+@line-height-base--tablet: 24px;
 
 @black: #000000;
 
 @gray-lightest: #f2f2f2;
 @gray-lighten: #e6e6e6;
+@gray-92: #eaeaea;
 @gray-light: #ebebeb;
 @gray-85: #d9d9d9;
 @gray: #cdcdcd;

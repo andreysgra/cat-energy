@@ -1,0 +1,112 @@
+// Стилизация input type["range"]
+
+.track(@track-width; @track-height; @track-properties) {
+  box-sizing: border-box;
+  width: @track-width;
+  height: @track-height;
+  @track-properties();
+}
+
+.thumb(@thumb-width; @thumb-height; @thumb-properties) {
+  box-sizing: border-box;
+  width: @thumb-width;
+  height: @thumb-height;
+  @thumb-properties();
+
+  cursor: pointer;
+}
+
+.range-hover(@range-hover-properties) {
+  @range-hover-properties();
+}
+
+.range-active(@range-active-properties) {
+  @range-active-properties();
+}
+
+.range-focus(@range-focus-properties) {
+  @range-focus-properties();
+}
+
+.input-range(@track-width, @track-height, @track-properties: {}, @thumb-width, @thumb-height, @thumb-properties: {}, @range-hover-properties: {}, @range-active-properties: {}, @range-focus-properties: {}) {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+
+  &,
+  &::-webkit-slider-thumb {
+    appearance: none;
+  }
+
+  &:hover {
+    &::-webkit-slider-thumb {
+      .range-hover(@range-hover-properties);
+    }
+
+    &::-moz-range-thumb {
+      .range-hover(@range-hover-properties);
+    }
+
+    &::-ms-thumb {
+      .range-hover(@range-hover-properties);
+    }
+  }
+
+  &:active {
+    &::-webkit-slider-thumb {
+      .range-active(@range-active-properties);
+    }
+
+    &::-moz-range-thumb {
+      .range-active(@range-active-properties);
+    }
+
+    &::-ms-thumb {
+      .range-active(@range-active-properties);
+    }
+  }
+
+  &:focus {
+    .range-focus(@range-focus-properties);
+  }
+
+  &::-webkit-slider-runnable-track {
+    .track(@track-width; @track-height; @track-properties);
+  }
+
+  &::-moz-range-track {
+    .track(@track-width; @track-height; @track-properties);
+  }
+
+  &::-ms-track {
+    border: none;
+    color: transparent;
+    .track(@track-width; @track-height; @track-properties);
+  }
+
+  &::-webkit-slider-thumb {
+    margin-top: 0.5 * (@track-height - @thumb-height);
+    .thumb(@thumb-width; @thumb-height; @thumb-properties);
+  }
+
+  &::-moz-range-thumb {
+    .thumb(@thumb-width; @thumb-height; @thumb-properties);
+  }
+
+  &::-ms-thumb {
+    margin-top: 0;
+    .thumb(@thumb-width; @thumb-height; @thumb-properties);
+  }
+
+  &::-ms-fill-lower {
+    background-color: transparent;
+  }
+
+  &::-ms-tooltip {
+    display: none;
+  }
+
+  &::-moz-focus-outer {
+    border: none;
+  }
+}

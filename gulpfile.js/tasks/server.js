@@ -10,7 +10,8 @@ task('server', done => {
     server: settings.paths.dest.root,
     cors: true,
     notify: false,
-    reloadOnRestart: true
+    reloadOnRestart: true,
+    browser: 'chrome'
   });
 
   done();

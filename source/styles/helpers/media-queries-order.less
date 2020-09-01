@@ -2,11 +2,23 @@
 .dummy {
   display: none;
 
+  @media @retina {
+    display: none;
+  }
+
   @media @tablet {
     display: none;
+
+    @media @retina {
+      display: none;
+    }
   }
 
   @media @desktop {
     display: none;
+
+    @media @retina {
+      display: none;
+    }
   }
 }

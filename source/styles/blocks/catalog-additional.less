@@ -1,0 +1,132 @@
+.catalog-additional {
+  padding-top: 28px;
+  padding-bottom: 35px;
+  overflow-x: hidden;
+
+  @media @tablet {
+    padding-top: 44px;
+    padding-bottom: 72px;
+  }
+
+  @media @desktop {
+    padding-top: 51px;
+    padding-bottom: 86px;
+  }
+}
+
+.catalog-additional__content-wrapper {
+  @media @desktop {
+    display: grid;
+    grid-template-columns: auto 245px;
+    column-gap: 80px;
+  }
+}
+
+.catalog-additional__title {
+  margin-top: 0;
+  margin-bottom: 34px;
+}
+
+.catalog-additional__list {
+  margin: 0 auto 38px;
+
+  @media @tablet {
+    margin-top: 45px;
+    margin-bottom: 70px;
+  }
+
+  @media @desktop {
+    margin-bottom: 0;
+  }
+}
+
+.catalog-additional__promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 500px;
+  min-height: 290px;
+  background-color: @green-primary;
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media @retina {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media @tablet {
+    flex-direction: row;
+    max-width: 708px;
+    min-height: 200px;
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @media @desktop {
+    flex-direction: column;
+    margin-top: 46px;
+    width: 245px;
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+
+    @media @retina {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
+}
+
+.catalog-additional__promo-text {
+  position: relative;
+  margin-top: 188px;
+  width: 60%;
+  font-size: 16px;
+  font-family: @font-family-secondary;
+  line-height: 20px;
+  color: @white;
+  text-align: center;
+
+  @media @tablet {
+    margin: 0 120px 0 auto;
+    width: 165px;
+    text-align: left;
+  }
+
+  @media @desktop {
+    margin: 188px 0 0;
+    width: 70%;
+    text-align: center;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -133px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 78px;
+    height: 80px;
+    background-image: url("../img/icon-gift.svg");
+    background-size: 56px 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @media @tablet {
+      top: 50%;
+      left: -345px;
+      transform: translateY(-57%);
+    }
+
+    @media @desktop {
+      top: -133px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+}

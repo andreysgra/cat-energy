@@ -1,0 +1,60 @@
+.heading {
+  position: relative;
+  display: inline-block;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @media @tablet {
+    padding-left: 37px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  @media @desktop {
+    padding-left: 0;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+  }
+
+  &::before {
+    z-index: -1;
+    top: 50%;
+    left: -20px;
+    right: -20px;
+    transform: translateY(-50%);
+    height: 1.333em;
+    background-color: @white;
+
+    @media @tablet {
+      left: 0;
+      right: -37px;
+    }
+
+    @media @desktop {
+      left: -40px;
+      right: -40px;
+    }
+  }
+
+  &::after {
+    z-index: -2;
+    top: 0.6em;
+    left: ~"calc(var(--content-padding-mobile) * -1)";
+    width: 100vw;
+    height: 3px;
+    background-color: @green-primary;
+
+    @media @tablet {
+      left: ~"calc(var(--content-padding-tablet) * -1)";
+    }
+
+    @media @desktop {
+      left: ~"calc((50vw - var(--content-width-desktop) / 2) * -1)";
+    }
+  }
+}

@@ -2,6 +2,16 @@
   position: relative;
 }
 
+.page-footer__contacts {
+  @media @desktop {
+    position: absolute;
+    z-index: 20;
+    left: calc(50% - var(--content-width-desktop) / 2);
+    top: 95px;
+    width: 570px;
+  }
+}
+
 .page-footer__bottom {
   padding-top: 39px;
   padding-bottom: 23px;

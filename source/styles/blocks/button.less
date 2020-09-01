@@ -24,4 +24,18 @@
       color: fade(@white, 30%);
     }
   }
+
+  &--gray {
+    background-color: @gray-lightest;
+    color: @gray-darken;
+
+    &:hover,
+    &:active {
+      background-color: @gray-light;
+    }
+
+    &:active {
+      color: fade(@gray-darken, 30%);
+    }
+  }
 }

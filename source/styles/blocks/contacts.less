@@ -9,14 +9,16 @@
   }
 
   @media @desktop {
-    position: absolute;
-    z-index: 20;
-    left: calc(50% - 610px);
-    top: 95px;
-    margin: 0;
     padding-left: 76px;
     padding-right: 76px;
-    width: 570px;
+  }
+
+  &--inner {
+    background-color: @gray-lightest;
+
+    @media @desktop {
+      background-color: @white;
+    }
   }
 }
 

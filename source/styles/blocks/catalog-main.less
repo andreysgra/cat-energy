@@ -1,0 +1,43 @@
+.catalog-main {
+  border-top: 1px solid @gray-light;
+  border-bottom: 1px solid @gray-light;
+
+  @media @tablet {
+    display: grid;
+    grid-template-columns: repeat(2, 324px);
+    column-gap: 60px;
+    row-gap: 52px;
+    justify-content: center;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-top: none;
+    border-bottom: none;
+  }
+
+  @media @desktop {
+    grid-template-columns: repeat(4, 245px);
+    column-gap: 80px;
+    row-gap: 55px;
+  }
+}
+
+.catalog-main__card-product {
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.catalog-main__products-show {
+  order: 1;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media @tablet {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

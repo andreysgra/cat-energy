@@ -1,0 +1,61 @@
+.map {
+  position: relative;
+  overflow: hidden;
+  height: 362px;
+
+  @media @tablet {
+    height: 396px;
+  }
+
+  @media @desktop {
+    height: 400px;
+  }
+}
+
+.map__image {
+  display: block;
+  width: 100%;
+  height: 362px;
+  object-fit: cover;
+
+  @media @tablet {
+    height: 396px;
+  }
+
+  @media @desktop {
+    height: 400px;
+  }
+}
+
+.map__pin {
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/map-pin.png");
+  background-size: 55px 53px;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media @tablet {
+    width: 115px;
+    height: 115px;
+    background-size: 113px 106px;
+  }
+
+  @media @desktop {
+    transform: translate(250%, -50%);
+  }
+}
+
+.map__interactive {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,51 @@
+.form-label-radio {
+  --radio-outer-diameter: 30px;
+  --radio-inner-diameter: 13px;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-left: 46px;
+  min-height: var(--radio-outer-diameter);
+
+  @media @tablet {
+    --radio-outer-diameter: 40px;
+    --radio-inner-diameter: 18px;
+
+    padding-left: 59px;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    box-sizing: border-box;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--radio-outer-diameter);
+    height: var(--radio-outer-diameter);
+    border: 1px solid @gray;
+    border-radius: 50%;
+    background-color: @white;
+  }
+
+  &::after {
+    content: none;
+    position: absolute;
+    left: ~"calc((var(--radio-outer-diameter) - var(--radio-inner-diameter)) / 2)";
+    top: 50%;
+    transform: translateY(-50%);
+    width: var(--radio-inner-diameter);
+    height: var(--radio-inner-diameter);
+    border-radius: 50%;
+    background-color: @green-primary;
+  }
+
+  &:hover::before {
+    border-color: #bababa;
+  }
+}

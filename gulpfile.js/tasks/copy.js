@@ -1,9 +1,16 @@
 'use strict';
 
-const settings = require('../settings');
-const { task, src, dest } = require('gulp');
+const { paths: { desination }, vendor } = require('../settings');
+const { src, dest } = require('gulp');
 
 // Копирование вендорных JS файлов
-task('copy', () =>
-  src(settings.vendor.scripts).pipe(dest(settings.paths.dest.scripts))
-);
+const copy = done => {
+  if (vendor.scripts.length != 0) {
+    src(vendor.scripts)
+      .pipe(dest(desination.scripts));
+  }
+
+  done();
+};
+
+module.exports = copy;

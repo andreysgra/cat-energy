@@ -1,0 +1,17 @@
+.page-body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  margin: 0;
+  min-width: @mobile-width;
+  min-height: 100%;
+  font-family: @font-family-base;
+  font-size: @font-size-base;
+  line-height: @line-height-base;
+  color: @font-color-base;
+  background-color: @bg-color-body;
+
+  @media @tablet {
+    font-size: @font-size-base--tablet;
+    line-height: @line-height-base--tablet;
+  }
+}

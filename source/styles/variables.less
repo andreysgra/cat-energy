@@ -1,3 +1,12 @@
+:root {
+  --content-padding-mobile: 20px;
+  --content-padding-tablet: 30px;
+  --content-padding-desktop: 40px;
+  --content-width-mobile: (@mobile-width - var(--content-padding-mobile) * 2);
+  --content-width-tablet: (@tablet-width - var(--content-padding-tablet) * 2);
+  --content-width-desktop: (@desktop-width - var(--content-padding-desktop) * 2);
+}
+
 @mobile-width: 320px;
 @tablet-width: 768px;
 @desktop-width: 1300px;
@@ -9,14 +18,34 @@
 
 @retina: ~"(min-resolution: @{retina-dpi})";
 
-@font-family-base: Arial, sans-serif;
-@font-family-second: Oswald, Tahoma, sans-serif;
+@font-family-base: Oswald, Tahoma, sans-serif;
+@font-family-secondary: Arial, sans-serif;
+
 @font-size-base: 14px;
 @line-height-base: 18px;
+@font-size-base--tablet: 16px;
+@line-height-base--tablet: 24px;
 
 @black: #000000;
+
+@gray-lightest: #f2f2f2;
+@gray-lighten: #e6e6e6;
+@gray-92: #eaeaea;
+@gray-light: #ebebeb;
+@gray-85: #d9d9d9;
+@gray: #cdcdcd;
+@gray-dark: #666666;
+@gray-darken: #444444;
+@gray-darkest: #222222;
+
+@green-primary: #68b738;
+@green-secondary: #5eaa2f;
+@green-special: #64a83b;
+
+@color-red: #ff8282;
+
 @white: #ffffff;
 
-@font-color-base: @black;
+@font-color-base: @gray-darken;
 
 @bg-color-body: @white;

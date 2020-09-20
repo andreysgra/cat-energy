@@ -75,9 +75,24 @@
     opacity: 0.3;
   }
 
+  &:focus {
+    outline: 1px dashed @black;
+    outline-offset: -2px;
+
+    @media @tablet {
+      outline-offset: 2px;
+    }
+  }
+
   &--index {
     @media @desktop {
       color: @white;
+    }
+
+    &:focus {
+      @media @desktop {
+        outline-color: @white;
+      }
     }
   }
 

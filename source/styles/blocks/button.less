@@ -5,12 +5,23 @@
   padding: 11px 10px;
   font-size: 16px;
   font-weight: 400;
+  font-family: inherit;
   line-height: 20px;
   color: @white;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   cursor: pointer;
+
+  &:focus {
+    outline-width: 2px;
+    outline-style: solid;
+    outline-offset: 1px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+  }
 
   &--green {
     background-color: @green-primary;
@@ -22,6 +33,10 @@
 
     &:active {
       color: fade(@white, 30%);
+    }
+
+    &:focus {
+      outline-color: @green-secondary;
     }
   }
 
@@ -36,6 +51,10 @@
 
     &:active {
       color: fade(@gray-darken, 30%);
+    }
+
+    &:focus {
+      outline-color: @gray;
     }
   }
 }

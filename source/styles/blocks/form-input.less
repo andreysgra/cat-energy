@@ -1,0 +1,38 @@
+.form-input {
+  box-sizing: border-box;
+  border: 1px solid @gray-lighten;
+  padding: 12px 15px;
+  min-height: 46px;
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 18px;
+  color: @gray-darken;
+  text-transform: uppercase;
+  outline: none;
+
+  @media @tablet {
+    padding: 9px 18px;
+    min-height: 52px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  &:hover {
+    border-color: @gray;
+  }
+
+  &:focus {
+    border-color: @gray-darken;
+    outline: 1px solid @gray-darken;
+  }
+
+  &:focus:invalid {
+    border-color: @color-red;
+    outline: 1px solid @color-red;
+  }
+
+  &::placeholder {
+    color: inherit;
+    opacity: 1;
+  }
+}
